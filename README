@@ -13,28 +13,28 @@ open Terminal.app and type the following:
     touch ~/Library/LaunchAgents/Ruby.Selenium.Server.Launcher.Deamon.plist
     open ~/Library/LaunchAgents/Ruby.Selenium.Server.Launcher.Deamon.plist
     paste in code
-        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-        <?xml version="1.0" encoding="UTF-8"?>
-        <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-        <plist version="1.0">
-        <dict>
-                <key>Label</key>
-                <string>RubySeleniumServerLauncher</string>
-                <key>OnDemand</key>
-                <true/>
-                <key>ProgramArguments</key>
-                <array>
-                   <string>/usr/bin/Selenium</string>
-                </array>
-                <key>ServiceDescription</key>
-                <string>Selenium Server</string>
-                <key>StandardErrorPath</key>
-                <string>/var/log/selenium/selenium-error.log</string>
-                <key>StandardOutPath</key>
-                <string>/var/log/selenium/selenium-output.log</string>
-        </dict>
-        </plist>
-        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+            <key>Label</key>
+            <string>RubySeleniumServerLauncher</string>
+            <key>OnDemand</key>
+            <true/>
+            <key>ProgramArguments</key>
+            <array>
+               <string>/usr/bin/Selenium</string>
+            </array>
+            <key>ServiceDescription</key>
+            <string>Selenium Server</string>
+            <key>StandardErrorPath</key>
+            <string>/var/log/selenium/selenium-error.log</string>
+            <key>StandardOutPath</key>
+            <string>/var/log/selenium/selenium-output.log</string>
+    </dict>
+    </plist>
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 Now go back to Terminal and type:
 
     launchctl load  ~/Library/LaunchAgents/Ruby.Selenium.Server.Launcher.Deamon.plist
@@ -61,12 +61,12 @@ open cmd.exe and type the following
 
 create Selenium_Service.reg with notepad
 paste in code
-    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     Windows Registry Editor Version 5.00
     [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RubySeleniumServerLauncher\Parameters]
     "Application"="jruby selenium"
     "AppDirectory"="PATH/TO/JRUBY/INSTALLATION"
-    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Now go back to Terminal and type:
     sc start RubySeleniumServerLauncher
