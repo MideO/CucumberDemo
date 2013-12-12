@@ -1,0 +1,4 @@
+baseurl: http://puppies.herokuapp.com
+jenkins_grid_url: "http://192.168.35.233:4444/wd/hub"
+local_grid_url: "http://127.0.0.1:4444/wd/hub"
+iphone_hub_url: "http://192.168.35.102:3001/wd/hub"
