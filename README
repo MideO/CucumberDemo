@@ -1,1 +1,3 @@
-Cucumber Demo Project
+#Cucumber Demo Project
+Cucumber Ruby framework, extension of https://github.com/cheezy/JetBrainsWebinar
+- Add support for remote driver(local or selenium grid)
